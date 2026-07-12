@@ -84,21 +84,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Pulse unifies strategy, operations, intelligence and execution into one command surface for campaign leadership.",
       },
       { name: "author", content: "Pulse" },
-      { property: "og:title", content: "Pulse — Campaign Operating System" },
+      { property: "og:title", content: "Pulse — The operating system for modern campaigns" },
       {
         property: "og:description",
         content:
-          "One operating system for strategy, operations, intelligence and execution.",
+          "Pulse unifies strategy, operations, intelligence and execution into one command surface for campaign leadership.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Pulse — The operating system for modern campaigns" },
+      { name: "twitter:description", content: "Pulse unifies strategy, operations, intelligence and execution into one command surface for campaign leadership." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/IW4xVdpHfWQuPd51OWBwW5tj60I3/social-images/social-1783815572301-ChatGPT_Image_Jun_26,_2026,_08_39_46_AM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/IW4xVdpHfWQuPd51OWBwW5tj60I3/social-images/social-1783815572301-ChatGPT_Image_Jun_26,_2026,_08_39_46_AM.webp" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
