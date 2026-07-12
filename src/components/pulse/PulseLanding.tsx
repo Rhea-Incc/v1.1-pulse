@@ -1,5 +1,3 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
 import logoAsset from "@/assets/pulse-logo.asset.json";
 
 import Nav from "./sections/Nav";
@@ -33,7 +31,3 @@ export default function PulseLanding() {
     </main>
   );
 }
-
-// Re-export shared primitives so section files can share hooks/utilities if
-// they need them. Section-local components stay in their own files.
-export { motion, useScroll, useTransform, AnimatePresence, useEffect, useMemo, useRef, useState };
