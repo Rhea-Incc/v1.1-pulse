@@ -2,11 +2,12 @@ import { motion } from "motion/react";
 import { Container, Display, Eyebrow, Reveal, Section } from "../primitives";
 
 const INFOGRAPHICS = [
-  { title: "Campaign Pulse Score", desc: "Composite health signal across every workstream." },
-  { title: "Operational Health Rings", desc: "Ops · Reach · Field · Comms at a glance." },
-  { title: "Executive Decision Queue", desc: "Only what leadership needs to decide, today." },
-  { title: "Campaign Timeline", desc: "Every milestone, sequenced against election day." },
-  { title: "Strategic Situation Map", desc: "Coverage, movement and pressure on one canvas." },
+  { title: "Campaign Pulse Score", desc: "A living operational health score combining campaign activity into one executive metric." },
+  { title: "Morning Brief", desc: "Daily intelligence summarizing what changed, what matters and what to do next." },
+  { title: "Today's Decisions", desc: "A prioritized executive queue of the actions leadership needs to take now." },
+  { title: "Upcoming Critical Events", desc: "Time-sensitive campaign operations and milestones across the field." },
+  { title: "Priority Counties", desc: "Where coverage, resources and local intelligence should be focused." },
+  { title: "AI Executive Summary", desc: "A concise operational overview generated for campaign leadership." },
 ];
 
 export default function MissionControl() {
@@ -32,8 +33,8 @@ export default function MissionControl() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-[42ch] text-lg leading-relaxed text-canvas/70">
-                Executive command surface where campaign managers see strategy, operations,
-                communications and movement health from a single, unified vantage point.
+                Authenticated campaign command center for leadership, strategists and operations.
+                Every workspace shown above is now active, connected and ready to drive decisions.
               </p>
             </Reveal>
             <div className="mt-10 space-y-3">
@@ -66,64 +67,144 @@ function MissionControlSurface() {
   return (
     <div className="rounded-3xl border border-canvas/15 bg-canvas/[0.04] p-4 backdrop-blur">
       <div className="rounded-2xl border border-canvas/10 bg-navy/60 p-6">
-        {/* Rings */}
-        <div className="flex items-center justify-between">
-          <div className="text-[10px] uppercase tracking-[0.25em] text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>Health Rings</div>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>Mission command</div>
+            <div className="mt-2 text-sm text-canvas/70">
+              Executive dashboard for campaign leadership, showing health, priorities and live field intelligence.
+            </div>
+          </div>
           <div className="text-[10px] text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>Updated · 12s ago</div>
         </div>
-        <div className="mt-4 flex items-center justify-center">
-          <svg viewBox="0 0 200 200" className="h-56 w-56">
-            {[
-              { r: 80, val: 0.86, c: "var(--civic)" },
-              { r: 65, val: 0.72, c: "#88b6ff" },
-              { r: 50, val: 0.94, c: "#fff" },
-            ].map((ring, i) => {
-              const C = 2 * Math.PI * ring.r;
-              return (
-                <g key={i} transform="rotate(-90 100 100)">
-                  <circle cx={100} cy={100} r={ring.r} stroke="rgba(255,255,255,0.08)" strokeWidth="8" fill="none" />
-                  <motion.circle
-                    cx={100}
-                    cy={100}
-                    r={ring.r}
-                    stroke={ring.c}
-                    strokeWidth="8"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeDasharray={C}
-                    initial={{ strokeDashoffset: C }}
-                    whileInView={{ strokeDashoffset: C * (1 - ring.val) }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.4, delay: 0.2 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-                  />
-                </g>
-              );
-            })}
-            <text x="100" y="98" textAnchor="middle" className="fill-canvas font-display" fontSize="34">87</text>
-            <text x="100" y="118" textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize="9" style={{ fontFamily: "var(--font-mono)", letterSpacing: "0.25em" }}>PULSE SCORE</text>
-          </svg>
-        </div>
-        <div className="mt-6 grid grid-cols-3 gap-3">
-          {[
-            { l: "Ops", v: 86, c: "bg-civic" },
-            { l: "Reach", v: 72, c: "bg-[#88b6ff]" },
-            { l: "Field", v: 94, c: "bg-white" },
-          ].map((k) => (
-            <div key={k.l} className="rounded-xl border border-canvas/10 bg-canvas/[0.03] p-3">
-              <div className="flex items-center justify-between text-[10px] uppercase tracking-widest text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>
-                <span>{k.l}</span><span>{k.v}</span>
-              </div>
-              <div className="mt-2 h-1 rounded-full bg-canvas/10">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${k.v}%` }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.2, delay: 0.6 }}
-                  className={`h-full rounded-full ${k.c}`}
-                />
-              </div>
+
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
+          <div className="rounded-3xl border border-canvas/10 bg-canvas/[0.04] p-5">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>
+              Campaign Pulse Score
             </div>
-          ))}
+            <div className="mt-4 flex items-end gap-4">
+              <span className="font-display text-6xl leading-none">87</span>
+              <span className="pb-2 text-xs text-civic">▲ 4.2</span>
+            </div>
+            <div className="mt-4 grid grid-cols-3 gap-3">
+              {[
+                { l: "Health", v: 86, c: "bg-civic" },
+                { l: "Volunteers", v: 72, c: "bg-[#88b6ff]" },
+                { l: "Allocation", v: 94, c: "bg-white" },
+              ].map((k) => (
+                <div key={k.l} className="rounded-xl border border-canvas/10 bg-navy/40 p-3">
+                  <div className="flex items-center justify-between text-[10px] uppercase tracking-widest text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>
+                    <span>{k.l}</span><span>{k.v}</span>
+                  </div>
+                  <div className="mt-2 h-1 rounded-full bg-canvas/10">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: `${k.v}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.2, delay: 0.6 }}
+                      className={`h-full rounded-full ${k.c}`}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-canvas/10 bg-canvas/[0.04] p-5">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>
+              Executive brief
+            </div>
+            <div className="mt-4 space-y-3 text-sm text-canvas/80">
+              {[
+                { label: "Today's Decisions", detail: "3 pending approvals" },
+                { label: "Upcoming Critical Events", detail: "2 high-priority operations" },
+                { label: "AI Executive Summary", detail: "Prepared for leadership" },
+              ].map((item) => (
+                <div key={item.label} className="rounded-2xl border border-canvas/10 bg-navy/40 px-4 py-3">
+                  <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-canvas/60" style={{ fontFamily: "var(--font-mono)" }}>
+                    <span>{item.label}</span>
+                    <span>{item.detail}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-4 lg:grid-cols-3">
+          <div className="rounded-3xl border border-canvas/10 bg-canvas/[0.03] p-4">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>
+              Priority counties
+            </div>
+            <div className="mt-3 space-y-3 text-sm text-canvas/80">
+              {[
+                { name: "West District", status: "High focus" },
+                { name: "Central Ridge", status: "Volunteer surge" },
+                { name: "East Corridor", status: "Monitoring" },
+              ].map((item) => (
+                <div key={item.name} className="flex items-center justify-between rounded-xl bg-navy/40 px-3 py-2">
+                  <span>{item.name}</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-canvas/50">{item.status}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-canvas/10 bg-canvas/[0.03] p-4">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>
+              Mission timeline
+            </div>
+            <div className="mt-3 space-y-3 text-sm">
+              {[
+                { label: "Town hall activation", progress: "78%", tag: "On track" },
+                { label: "Manifesto rollout", progress: "54%", tag: "Review" },
+                { label: "Volunteer wave 03", progress: "92%", tag: "Ahead" },
+              ].map((item, i) => (
+                <div key={item.label} className="space-y-2">
+                  <div className="flex items-center justify-between text-[10px] uppercase tracking-[0.2em] text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>
+                    <span>{item.label}</span>
+                    <span>{item.tag}</span>
+                  </div>
+                  <div className="h-2 overflow-hidden rounded-full bg-canvas/10">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileInView={{ width: item.progress }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.2, delay: 0.6 + i * 0.1 }}
+                      className="h-full rounded-full bg-civic"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-canvas/10 bg-canvas/[0.03] p-4">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-canvas/50" style={{ fontFamily: "var(--font-mono)" }}>
+              Situation map
+            </div>
+            <svg viewBox="0 0 300 140" className="mt-3 h-32 w-full">
+              <defs>
+                <pattern id="grid" width="12" height="12" patternUnits="userSpaceOnUse">
+                  <path d="M 12 0 L 0 0 0 12" fill="none" stroke="var(--line)" strokeWidth="0.4" />
+                </pattern>
+              </defs>
+              <rect width="300" height="140" fill="url(#grid)" />
+              {[
+                [40, 60], [90, 40], [130, 80], [180, 55], [220, 90], [260, 45], [70, 100], [200, 30]
+              ].map(([x, y], i) => (
+                <g key={i}>
+                  <motion.circle
+                    cx={x} cy={y} r={10}
+                    className="fill-civic/20"
+                    animate={{ r: [8, 16, 8], opacity: [0.5, 0.1, 0.5] }}
+                    transition={{ duration: 3, repeat: Infinity, delay: i * 0.2 }}
+                  />
+                  <circle cx={x} cy={y} r={3} className="fill-navy" />
+                </g>
+              ))}
+            </svg>
+          </div>
         </div>
       </div>
     </div>

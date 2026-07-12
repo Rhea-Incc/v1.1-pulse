@@ -22,7 +22,7 @@ const INSIGHTS = [
 
 export default function Problem() {
   return (
-    <Section id="problem" className="border-t border-line/60">
+    <Section id="challenge" className="border-t border-line/60">
       <Container>
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
@@ -37,7 +37,7 @@ export default function Problem() {
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-[42ch] text-lg leading-relaxed text-graphite">
                 Every campaign is quietly bleeding hours, context and momentum through a
-                patchwork of apps that were never designed to work together.
+                patchwork of apps that were never designed to share a single operating reality.
               </p>
             </Reveal>
             <Reveal delay={0.15}>

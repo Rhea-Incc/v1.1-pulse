@@ -3,7 +3,7 @@ import { Container, CTA, Chip, Display } from "../primitives";
 
 export default function Hero({ logoUrl }: { logoUrl: string }) {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden pt-32 md:pt-40">
+    <section id="vision" className="relative min-h-[100svh] overflow-hidden pt-32 md:pt-40">
       {/* Ambient network */}
       <NetworkBackdrop />
 
@@ -14,15 +14,15 @@ export default function Hero({ logoUrl }: { logoUrl: string }) {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-start gap-8"
         >
-          <Chip>Phase One · Launch Experience</Chip>
+          <Chip>Phase 2A · Launch Experience</Chip>
           <Display as="h1" className="max-w-[18ch]">
             Campaigns move fast.
             <br />
             <span className="italic text-navy">Leadership</span> should move faster.
           </Display>
           <p className="max-w-[46ch] text-lg leading-relaxed text-graphite md:text-xl">
-            One operating system for strategy, operations, intelligence and execution —
-            engineered for the pace of a modern campaign.
+            A fully authenticated campaign operating system where every workspace shown on the landing experience
+            becomes interactive, connected and ready for live mission control.
           </p>
           <div className="mt-2 flex flex-wrap gap-3">
             <CTA>Book private demonstration</CTA>

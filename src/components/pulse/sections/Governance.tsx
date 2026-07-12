@@ -11,7 +11,7 @@ const PAIRS = [
 
 export default function Governance() {
   return (
-    <Section id="governance" className="bg-[oklch(0.975_0.006_85)]">
+    <Section id="industries" className="bg-[oklch(0.975_0.006_85)]">
       <Container>
         <div className="grid gap-16 md:grid-cols-12">
           <div className="md:col-span-5">
@@ -23,9 +23,9 @@ export default function Governance() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-8 max-w-[42ch] text-lg leading-relaxed text-graphite">
-                Pulse preserves institutional knowledge and relationships. Campaign
-                artifacts transform into governance workspaces so organizations can
-                continue engaging communities long after the polls close.
+                Pulse preserves institutional knowledge and relationships across civic
+                industries. Campaign artifacts transform into governance workspaces so
+                organizations can continue engaging communities long after the polls close.
               </p>
             </Reveal>
           </div>

@@ -20,12 +20,12 @@ export default function PulseLanding() {
       <Hero logoUrl={logoAsset.url} />
       <Problem />
       <Concept />
-      <Walkthrough />
-      <MissionControl />
       <Ecosystem />
+      <MissionControl />
       <Showcases />
-      <Intelligence />
+      <Walkthrough />
       <Governance />
+      <Intelligence />
       <Closing />
       <Footer logoUrl={logoAsset.url} />
     </main>

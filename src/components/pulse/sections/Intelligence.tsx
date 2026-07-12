@@ -8,7 +8,7 @@ const VIS = [
 
 export default function Intelligence() {
   return (
-    <Section id="intelligence" className="border-t border-line/60">
+    <Section id="insights" className="border-t border-line/60">
       <Container>
         <div className="mb-16 max-w-2xl">
           <Reveal><Eyebrow index="07">The intelligence layer</Eyebrow></Reveal>

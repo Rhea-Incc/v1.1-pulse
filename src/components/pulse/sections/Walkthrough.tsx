@@ -67,7 +67,7 @@ export default function Walkthrough() {
   const progress = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <Section id="walkthrough" className="border-t border-line/60">
+    <Section id="lifecycle" className="border-t border-line/60">
       <Container>
         <div className="mb-24 max-w-3xl">
           <Reveal><Eyebrow index="03">The signature walkthrough</Eyebrow></Reveal>

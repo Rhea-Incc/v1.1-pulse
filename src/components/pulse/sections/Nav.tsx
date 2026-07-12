@@ -14,15 +14,21 @@ export default function Nav({ logoUrl }: { logoUrl: string }) {
           <img src={logoUrl} alt="Pulse" className="h-9 w-auto" />
         </div>
         <nav className="hidden items-center gap-8 text-sm text-graphite md:flex">
-          <a href="#walkthrough" className="transition hover:text-ink">Product</a>
-          <a href="#ecosystem" className="transition hover:text-ink">Platform</a>
-          <a href="#intelligence" className="transition hover:text-ink">Intelligence</a>
-          <a href="#governance" className="transition hover:text-ink">Governance</a>
+          <a href="#vision" className="transition hover:text-ink">Vision</a>
+          <a href="#platform" className="transition hover:text-ink">Platform</a>
+          <a href="#mission-control" className="transition hover:text-ink">Mission Control</a>
+          <a href="#capabilities" className="transition hover:text-ink">Capabilities</a>
+          <a href="#lifecycle" className="transition hover:text-ink">Lifecycle</a>
+          <a href="#industries" className="transition hover:text-ink">Industries</a>
+          <a href="#insights" className="transition hover:text-ink">Insights</a>
+          <a href="#contact" className="transition hover:text-ink">Contact</a>
         </nav>
         <div className="flex items-center gap-3">
-          <button className="hidden text-sm text-graphite transition hover:text-ink md:inline">Sign in</button>
+          <button className="hidden rounded-full border border-line bg-canvas px-4 py-2 text-xs font-medium text-graphite transition hover:bg-[rgba(15,39,71,0.06)] md:inline">
+            Request Partnership
+          </button>
           <button className="inline-flex items-center gap-2 rounded-full bg-navy px-4 py-2 text-xs font-medium text-canvas transition hover:bg-ink">
-            Book demonstration
+            Book Demo
           </button>
         </div>
       </div>

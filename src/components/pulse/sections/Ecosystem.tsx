@@ -12,7 +12,7 @@ const MODULES = [
 
 export default function Ecosystem() {
   return (
-    <Section id="ecosystem" className="border-t border-line/60">
+    <Section id="platform" className="border-t border-line/60">
       <Container>
         <div className="mb-16 max-w-2xl">
           <Reveal><Eyebrow index="05">The platform</Eyebrow></Reveal>
@@ -21,8 +21,8 @@ export default function Ecosystem() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 text-lg leading-relaxed text-graphite">
-              Modules orbit a single core. Data flows between them without translation,
-              handoffs, or exports.
+              Pulse brings operations, strategy, intelligence and community into one modular
+              system so that every team works from the same live campaign context.
             </p>
           </Reveal>
         </div>

@@ -18,7 +18,7 @@ export default function Showcases() {
   const item = SHOWCASES.find((s) => s.id === active)!;
 
   return (
-    <Section id="showcases" className="bg-[oklch(0.975_0.006_85)]">
+    <Section id="capabilities" className="bg-[oklch(0.975_0.006_85)]">
       <Container>
         <div className="mb-16 max-w-2xl">
           <Reveal><Eyebrow index="06">Interactive workspaces</Eyebrow></Reveal>

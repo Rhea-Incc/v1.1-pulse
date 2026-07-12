@@ -3,7 +3,7 @@ import { Container, CTA, Display, Eyebrow, Reveal, Section } from "../primitives
 
 export default function Closing() {
   return (
-    <Section id="closing" className="border-t border-line/60 pb-40">
+    <Section id="contact" className="border-t border-line/60 pb-40">
       <Container>
         <div className="mx-auto max-w-3xl text-center">
           <Reveal><Eyebrow className="justify-center" index="09">The future</Eyebrow></Reveal>

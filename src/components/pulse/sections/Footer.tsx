@@ -8,7 +8,7 @@ export default function Footer({ logoUrl }: { logoUrl: string }) {
           <div className="flex items-center gap-4">
             <img src={logoUrl} alt="Pulse" className="h-7 w-auto" />
             <span className="text-xs text-graphite" style={{ fontFamily: "var(--font-mono)" }}>
-              PULSE · PHASE ONE · LAUNCH EXPERIENCE
+              PULSE · PHASE 2A · LAUNCH EXPERIENCE
             </span>
           </div>
           <div className="flex gap-8 text-xs text-graphite" style={{ fontFamily: "var(--font-mono)" }}>
